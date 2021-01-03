@@ -53,8 +53,10 @@ body {
     width: 60%;
     background-color: rgba(255, 187, 147, 0.89);
     border-style: inset;
+    margin-top: 10px;
 }
 .picture {
+    margin-top: 40px;
     width: 30%;
 }
 .about-me:after {
@@ -66,7 +68,7 @@ body {
 .ultimate-frisbee {
     padding-left: 200px;
     padding-right: 200px;
-    padding-bottom: 800px
+    padding-bottom: 900px
 }
 .ultimate {
     float: left;
@@ -75,8 +77,12 @@ body {
     font: Arial;
     text-align: left;
     font-size: 25px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
 }
 .twitter {
+    padding-top: 40px;
     width: 35%;
 }
 .carletonUni {
@@ -135,6 +141,10 @@ body {
     font: Arial;
     font-size: 20px;
 }
+.twitter-desc {
+    font: Arial;
+    font-size: 20px;
+}
 .title {
     text-align: left;
     font-weight: bold;
@@ -155,4 +165,10 @@ body {
     width: 595px;
     height: 550px;
     border-style: solid;
+}
+.layout {
+    width: 500px;
+    height: auto;
+    border-style: solid;
+    border-color: gray;
 }
