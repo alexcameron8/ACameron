@@ -37,8 +37,8 @@ body {
     text-align: center;
 }
 .about-me {
-    padding-left: 200px;
-    padding-right: 200px;
+    margin-left: 200px;
+    margin-right: 200px;
 }
 .mainAbout {
     font: Arial;
@@ -47,7 +47,7 @@ body {
 }
 .about {
     float: left;
-    padding: 10px; 
+    padding: 15px; 
 }
 .left {
     width: 60%;
@@ -56,9 +56,6 @@ body {
 }
 .picture {
     width: 30%;
-    background-color: #ffe7c3;
-    border-style: solid;
-    border-color: rgba(151, 148, 148, 0.89)
 }
 .about-me:after {
     content: "";
@@ -73,7 +70,6 @@ body {
 }
 .ultimate {
     float: left;
-
 }
 .desc {
     font: Arial;
@@ -145,8 +141,18 @@ body {
     font-size: 25px;
 }
 .RiskPic {
-    width: 1500px; 
-    height: 800px;
+    width: 1200px; 
+    height: 600px;
     border-style: solid;
     border-color: gray;
+    object-fit:f;
+    max-width: 100%;
+    height: auto;
+}
+.AlexPic {
+    max-width: 110%;
+    height: 100%;
+    width: 595px;
+    height: 550px;
+    border-style: solid;
 }
