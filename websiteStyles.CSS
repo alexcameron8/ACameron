@@ -1,6 +1,6 @@
 header {
     padding : 0;
-    background-image: url('/Resources/forest.jpg');
+    background-image: url('../Assets/forest.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     padding: 200px 100px 200px;
