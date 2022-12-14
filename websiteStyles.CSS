@@ -1,12 +1,11 @@
 header {
+    font-family: Tahoma, sans-serif;
     padding : 0;
-    background-image: url('./Assets/forest.jpg');
-    background-repeat: no-repeat;
     background-size: 100% 100%;
     padding: 200px 100px 200px;
-    background-attachment: fixed;
 }
 header h1 {
+    font-family: Tahoma, sans-serif;
     font-size: 100px;
     font: Arial;
     text-align: left;
@@ -14,6 +13,7 @@ header h1 {
     text-shadow:10px 5px 5px gray; 
 }
 h2{
+    font-family: Tahoma, sans-serif;
     font-size: 30px;
     font: Arial;
     text-align: left;
@@ -21,17 +21,20 @@ h2{
 
 }
 h3 {
+    font-family: Tahoma, sans-serif;
     font-size: 40px;
     font: Arial;
     text-align: left;
 }
 h4 {
+    font-family: Tahoma, sans-serif;
     font-size: 35px;
     font: Arial;
     text-align: left;
 }
 body {
-    background-color: #ffefd7;
+    font-family: Tahoma, sans-serif;
+    background-color: white;
     text-align: center;
 }
 .about-me {
@@ -39,7 +42,7 @@ body {
     margin-right: 200px;
 }
 .mainAbout {
-    font: Arial;
+    font-family: Tahoma, sans-serif;
     text-align: left;
     font-size: 25px;
 }
@@ -47,15 +50,21 @@ body {
     float: left;
     padding: 15px; 
 }
+
+.background {
+    position:absolute;
+    top: 0; 
+    bottom: 0;
+    left: 0;  
+    right: 0;
+    z-index: -1;
+}
+
 .left {
     width: 60%;
-    background-color: rgba(255, 187, 147, 0.89);
+    background-color: lightgray;
     border-style: inset;
     margin-top: 10px;
-}
-.picture {
-    margin-top: 40px;
-    width: 30%;
 }
 .about-me:after {
     content: "";
@@ -72,7 +81,7 @@ body {
     float: left;
 }
 .desc {
-    font: Arial;
+    font-family: Tahoma, sans-serif;
     text-align: left;
     font-size: 25px;
     padding-left: 40px;
@@ -103,12 +112,14 @@ body {
 .fa-at {
     color: black;
 }
+
 .list {
-    font: Arial;
+    font-family: Tahoma, sans-serif;
     text-align: left;
     font-size: 25px;
 }
 .gitlink {
+    font-family: Tahoma, sans-serif;
     text-align: left;
     padding-left: 40px;
     font-size: 20px;
@@ -116,7 +127,7 @@ body {
 }
 .projectAbout {
     text-align: left;
-    font: Arial;
+    font: Tahoma;
     font-size: 25px;
     font-weight: bold;
 }
@@ -133,14 +144,14 @@ body {
     border-left-color: rgb(167, 167, 167);
     border-right-color: rgb(167, 167, 167);
     outline: 50px hidden;
-    background-color: rgba(255, 187, 147, 0.89);
+    background-color:lightgray;
 }
 .example {
-    font: Arial;
+    font-family: Tahoma, sans-serif;
     font-size: 20px;
 }
 .twitter-desc {
-    font: Arial;
+    font-family: Tahoma, sans-serif;
     font-size: 20px;
 }
 .title {
@@ -158,10 +169,6 @@ body {
     height: auto;
 }
 .AlexPic {
-    max-width: 110%;
-    height: 100%;
-    width: 595px;
-    height: auto;
     border-style: solid;
 }
 .layout {
@@ -169,4 +176,20 @@ body {
     height: auto;
     border-style: solid;
     border-color: gray;
+}
+
+.section {
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+.section.visible {
+    opacity: 1;
+}
+
+.btn {
+    float: right;
+    border: none;
+    background-color: white;
+    color: black;
 }
