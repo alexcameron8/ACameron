@@ -2,23 +2,35 @@
 <html lang="en-us">
     <title>Alex Cameron</title>
     <link rel="stylesheet" href="websiteStyles.CSS">
+    <script src="jquery-3.6.2.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
     <meta charset="UTF-8">
-
-
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
     <button onclick="startStop(this)" class="btn"><i id="pausePlay" class="fa fa-pause"></i></button>
+    <div class="nav-wrapper">
+        <div class="navbar rightEffect">
+            <a class="tab" href="./index.html">HOME</a>
+            <a class="tab" href="#about-me">ABOUT</a>
+            <a class="tab" href="projects.html">PROJECTS</a>
+            <a class="tab" href="">RESUME</a>
+            <a class="tab" href="">CONTACT</a>
+        </div>
+    </div>
     <header>
+    </header>
+    <div class="title">
         <!-- Background uses particles.js V2.2.2 which is a lightweight, dependency-free and responsive javascript plugin for particle backgrounds.  Credit: https://marcbruederlin.github.io/particles.js/-->
         <canvas class="background"></canvas>
-        <img class="carletonUni" src="./Assets/carletonUniversity.png" alt="CarletonUniversity">
+        <img class="carletonUni" src="../Assets/carletonUniversity.png" alt="CarletonUniversity">
         <h1>
             Alex Cameron
         </h1>
         <h2>
-            Software Engineering Student at Carleton University
+            Software Engineering Student
         <h2>
-    </header>
+    </div>
+
     <div class="section" id="section1">
         <div class="about-me">
             <hr>
@@ -27,18 +39,18 @@
         </h3>
         <hr>
             <div class="about left">
-                <p class="title">Education</p>
+                <p class="title-about">Education</p>
                 <p class="mainAbout">
                     My name is Alex Cameron and I am a 3rd year Software Engineering student studying at Carleton University and currently seeking a Coop position for the Summer 2021 semester. 
                     <br>
-                    Work Availability: 4, 8, 12 or 16 months work terms starting in May 2021.  
+                    Work Availability: 4 month work term starting in May 2022.  
                 </p>
-                <p class="title">Interests</p>
+                <p class="title-about">Interests</p>
                 <p class="mainAbout">
                     Growing up I played hockey, ultimate frisbee and played on various other school sport teams. During the year 2020 I have developed a strong passion for programing and participated in several hackathons which has allowed me to learn
                     to apply my programming knowledge outside of classwork and experiment with new projects in various languages.
                 </p>
-                <p class="title">Skills</p>
+                <p class="title-about">Skills</p>
                 <p class="mainAbout">
                     Most of my programming experience is with java leading to a strong understanding of the language. Through designing and programming personal projects and small scale applications, this has lead to an intermediate knowledge of C, Python and HTML and CSS.
                 </p>
@@ -70,7 +82,7 @@
                         </div></li>
                     </ul>
                     <br>
-                    <img class="RiskPic" src="./Assets/SchoolPlannerEx.PNG" alt="SchoolPlannerPic">
+                    <img class="RiskPic" src="../Assets/SchoolPlannerEx.PNG" alt="SchoolPlannerPic">
                     <p class="example">Screenshot of SchoolPlanner user interface</p>
                     <br>
                     <div class="gitlink"><a href="https://github.com/alexcameron8/SchoolPlanner" target="_blank">Link to GitHub Repo  <i class="fa fa-github" aria-hidden="true"></i></a></div>
@@ -98,7 +110,7 @@
                     </div></li>
                 </ul>
                 <br>
-                <img class="RiskPic" src="./Assets/Risk.PNG" alt="RiskPic">
+                <img class="RiskPic" src="../Assets/Risk.PNG" alt="RiskPic">
                 <p class="example">Screenshot of Risk Game user interface map screen</p>
                 <br>
                 <div class="gitlink"><a href="https://github.com/alexcameron8/RiskGame" target="_blank">Link to GitHub Repo  <i class="fa fa-github" aria-hidden="true"></i></a></div>
@@ -170,7 +182,7 @@
                 <br><br>
                 I have played for the Carleton University's Men's Ultimate team, since 2018 and am currently one of the programs captains. I also play with the highest competitive Ottawa open team, Phoenix. In 2020 I joined the Ottawa Outlaws program. The Ottawa Outlaws were a professional Ultimate Frisbee team who were founded in 2015 and competed in the AUDL from 2015-2022. My career stats can be viewed: <ul>https://theaudl.com/league/players/acameron</ul>
             </div> 
-            <img class="layout"src="Assets/layout.gif">
+            <img class="layout"src="../Assets/layout.gif">
             <p class="example">Enjoy this gif of me catching a frisbee :)</p> 
         </div>
 
@@ -186,53 +198,15 @@
     </footer>
     
     <body>
+
+        <div class="loader-wrapper">
+            <span class="loading"><span class="loading-inner"></span></span>
+        </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
-
-        <script>
-            var particles = Particles.init({
-                selector: '.background',
-                sizeVariations: 1,
-                color : ["#3b5998","#4267b2","#8b9dc3","#dfe3ee","#ffffff"],
-                connectParticles : true,
-            });
-
-            function startStop(x) {
-                if ( document.getElementById("pausePlay").classList.contains("fa-play")){
-                    document.getElementById("pausePlay").classList.remove('fa-play');
-                    document.getElementById("pausePlay").classList.add('fa-pause');
-                    particles.resumeAnimation();
-                }else{
-                    document.getElementById("pausePlay").classList.remove('fa-pause');
-                    document.getElementById("pausePlay").classList.add('fa-play');
-                    particles.pauseAnimation();
-                }
-            }
-
-            window.addEventListener('scroll', function() {
-                var section1 = document.getElementById('section1');
-                var section2 = document.getElementById('section2');
-                var section3 = document.getElementById('section3');
-                var section4 = document.getElementById('section4');
-                var section5 = document.getElementById('section5');
-
-                if (section1.getBoundingClientRect().top <= window.innerHeight) {
-                    section1.classList.add('visible');
-                }
-                if (section2.getBoundingClientRect().top <= window.innerHeight) {
-                    section2.classList.add('visible');
-                }
-                if (section3.getBoundingClientRect().top <= window.innerHeight) {
-                    section3.classList.add('visible');
-                }
-                if (section4.getBoundingClientRect().top <= window.innerHeight) {
-                    section4.classList.add('visible');
-                }
-                if (section5.getBoundingClientRect().top <= window.innerHeight) {
-                    section5.classList.add('visible');
-                }
-            });
-        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="index.js"></script>
     </body>
+
     <div class="footerSocials">
         <a href="https://www.linkedin.com/in/alexcameron8" target="_blank">
         <i class="fa fa-linkedin fa-3x" aria-hidden="true">
