@@ -9,12 +9,12 @@
 
     <button onclick="startStop(this)" class="btn"><i id="pausePlay" class="fa fa-pause"></i></button>
     <div class="navbar rightEffect">
-        <img src="..\Assets\AC.png" alt="Logo">
+        <img src=".\Assets\AC.png" alt="Logo">
         <a class="tab" href="./index.html">HOME</a>
-        <a class="tab" href="#about-me">ABOUT</a>
-        <a class="tab" href="projects.html">PROJECTS</a>
-        <a class="tab" href="">RESUME</a>
-        <a class="tab" href="">CONTACT</a>
+        <a class="tab" href="#about-me" id="ba">ABOUT</a>
+        <a class="tab" href="#projects" id="bp">PROJECTS</a>
+        <a class="tab" href="documents/Alex Cameron - Resume.pdf">RESUME</a>
+        <!-- <a class="tab" href="">CONTACT</a> -->
     </div>
     <header>
     </header>
@@ -29,12 +29,13 @@
         <section class="animation">
           <div class="first"><div>Software Engineering Student</div></div>
           <div class="second"><div>Hard Worker</div></div>
-          <div class="third"><div>Passionate</div></div>
+          <div class="third"><div>Open to Learning</div></div>
         </section>
         <div class="down-arrow"></div>
     </div>
 
     <div class="section-wrapper"> 
+      <div id="about-me" onclick="window.location.hash='ba';"></div>
         <hr>
         <h3>
             Who am I?
@@ -56,13 +57,14 @@
     </div>
     <!-- Personal Projects Portion -->
         <div class="section-wrapper">
+          <div id="projects" onclick="window.location.hash='bp';"></div>
             <h3>Personal Projects</h3>
             <hr>
         </div>  
 
             <div class="blog-card alt">
                 <div class="meta">
-                  <div class="photo" style="background-image: url(../Assets/Iot-garden.PNG)"></div>
+                  <div class="photo" style="background-image: url(./Assets/Iot-garden.PNG)"></div>
                   <ul class="details">
                     <li class="author">
                         <ul>
@@ -92,7 +94,7 @@
         
             <div class="blog-card">
                 <div class="meta">
-                  <div class="photo" style="background-image: url(../Assets/web-dev.png)"></div>
+                  <div class="photo" style="background-image: url(./Assets/web-dev.png)"></div>
                   <ul class="details">
                     <li class="author"><a href="./index.html#about-me">Alex Cameron</a></li>
                     <li class="date">January 2021-December 2022</li>
@@ -123,7 +125,7 @@
               </div>
               <div class="blog-card alt">
                 <div class="meta">
-                  <div class="photo" style="background-image: url(../Assets/Risk.PNG)"></div>
+                  <div class="photo" style="background-image: url(./Assets/Risk.PNG)"></div>
                   <ul class="details">
                     <li class="author">
                         <ul>
@@ -153,7 +155,7 @@
         
               <div class="blog-card">
                 <div class="meta">
-                  <div class="photo" style="background-image: url(../Assets/SchoolPlannerEx.PNG)"></div>
+                  <div class="photo" style="background-image: url(./Assets/SchoolPlannerEx.PNG)"></div>
                   <ul class="details">
                     <li class="author"><a href="./index.html#about-me">Alex Cameron</a></li>
                     <li class="date">January 2021</li>
@@ -177,7 +179,7 @@
         
               <div class="blog-card alt">
                 <div class="meta">
-                  <div class="photo" style="background-image: url(../Assets/layout.gif)"></div>
+                  <div class="photo" style="background-image: url(./Assets/layout.gif)"></div>
                   <ul class="details">
                     <li class="author">
                         <ul>
@@ -217,11 +219,10 @@
                 <p class="main-about">
                     I have been playing ultimate frisbee since my first year of high school in 2015. I have played competitively since I was 16 when I played on Ottawa ignite for 3 years before competing with adult teams.
                 </p>
-                <br>
                 <p class="main-about">
                     I have played for the Carleton University's Men's Ultimate team, since 2018 and am currently one of the programs captains. I also play with the highest competitive Ottawa open team, Phoenix. In 2020 I joined the Ottawa Outlaws program. The Ottawa Outlaws were a professional Ultimate Frisbee team who were founded in 2015 and competed in the AUDL from 2015-2022. <a href='https://theaudl.com/league/players/acameron'>Click here to view my career stats. </a>
                 </p>
-            <img class="layout"src="../Assets/layout.gif">
+            <img class="layout"src="./Assets/layout.gif">
             <p class="example">Enjoy this gif of me catching a frisbee :)</p> 
         </div>
 
@@ -254,6 +255,6 @@
         </a>
     </div>
     <div class="footer">
-        Published: 2021-01-01 Last Updated: 2022-01-12
+        Published: 2021-01-01 Last Updated: 2022-01-17
     </div>
 </html>
