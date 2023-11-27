@@ -33,37 +33,39 @@
         <div class="down-arrow"></div>
       </div>
 
-    <div class="section-wrapper"> 
       <div id="about-me" onclick="window.location.hash='ba';"></div>
         <hr>
-        <h3>
-            About
-        </h3>
-        <hr>
-        <p class="title-about">Who am I?</p>
-        <p class="main-about">
-            My name is Alex Cameron and I am a passionate, hard working Software Engineering student at Carleton University. I am currently in my fourth year of my 
-            undergraduate studies and have completed four co-op work terms working on the Software Engineering team at <a href="https://www.gastops.com/company/">Gastops Ltd</a>.  
-        </p>
-        <p class="title-about">Interests</p>
-        <p class="main-about">
-            During my studies, work experience and participation in hackathons I have developed a passion for solving challenges and creating solutions through programming.
-            I have learned so much by applying my knowledge of software development in school work, personal projects and during my co-op experience. I am eager to continue 
-            learning new skills, concepts and open to advice    
-        </p>
-        <p class="title-about">Skills</p>
-        <p class="main-about">
-            Programming Languages: Python, Java, C, VB.NET, Dart/Flutter, PHP, HTML, CSS, Javascript <br><br> 
-            Programming Frameworks & Tools: Git, Appwrite, Docker, Jenkins, SQL, Visual Studio, VS Code, Android Studio, Intellij IDE's <br><br>
-            Concepts: Software development, Object-oriented programming, Cryptography, MCV, CI/CD, IoT
-        </p>
-    </div>
-    <!-- Personal Projects Portion -->
-        <div class="section-wrapper">
-          <div id="projects" onclick="window.location.hash='bp';"></div>
-            <h3>Personal Projects</h3>
-            <hr>
-        </div>  
+        <div class="blog-title">
+          <h1>About</h1>
+        </div>    
+        <div class="blog-card">
+          <div class="description">
+          <h2>Who am I?</h2>
+          <p>
+              My name is Alex Cameron and I am a passionate, hard working Software Engineering student at Carleton University. I am currently in my fourth year of my 
+              undergraduate studies and have completed four co-op work terms working on the Software Engineering team at <a href="https://www.gastops.com/company/">Gastops Ltd</a>.  
+          </p>
+          <h2>Interests</h2>
+          <p>
+              During my studies, work experience and participation in hackathons I have developed a passion for solving challenges and creating solutions through programming.
+              I have learned so much by applying my knowledge of software development in school work, personal projects and during my co-op experience. I am eager to continue 
+              learning new skills, concepts and open to advice    
+          </p>
+          <h2>Skills</h2>
+          <p>
+              Programming Languages: Python, Java, C, VB.NET, Dart/Flutter, PHP, HTML, CSS, Javascript <br><br> 
+              Programming Frameworks & Tools: Git, Appwrite, Docker, Jenkins, SQL, Visual Studio, VS Code, Android Studio, Intellij IDE's <br><br>
+              Concepts: Software development, Object-oriented programming, Cryptography, MCV, CI/CD, IoT
+          </p>        
+        </div>
+        </div>
+    <hr>
+    <!-- Personal Projects Portion --> 
+        <!-- <div class="blog-card"> -->
+          <div class="blog-title" onclick="window.location.hash='bp';">
+            <h1>Personal Projects</h1>
+          </div>    
+        <!-- </div> -->
           <div class="blog-card">
             <div class="meta">
               <div class="photo" style="background-image: url(./Assets/Iot-garden.PNG)"></div>
@@ -245,31 +247,31 @@
                   </p>
                 </div>
               </div>
-   
-    <div class="section-wrapper">
-        <h3>
-            Ultimate Frisbee
-        </h3>
         <hr>    
-        <div class="">
-                <h4>
-                    My "Ultimate" Journey
-                </h4>
-                <p class="main-about">
-                    I have been playing Ultimate Frisbee since my first year of high school, in 2015. I have played competitively since I was 16 when I played on the Ottawa Ignite junior team for 3 years before competing with adult teams.
-                </p>
-                <p class="main-about">
-                    I have played for the Carleton University's Men's Ultimate team since 2018 and am currently one of the teams captains. I also play with the highest competitive Ottawa open team, Phoenix. In 2020 I joined the Ottawa Outlaws program. The Ottawa Outlaws were a professional Ultimate Frisbee team who were founded in 2015 and competed in the AUDL from 2015-2022. <a href='https://theaudl.com/league/players/acameron'>Click here to view my career stats. </a>
-                </p>
-            <img class="layout"src="./Assets/layout.gif">
-            <p class="example">Enjoy this gif of me catching a frisbee :)</p> 
-        </div>
-
+      <div class="blog-title">
+        <h1>Ultimate Frisbee</h1>
+      </div>    
+    <div class="blog-card">
+      <div class="about">
+        <div class="description">
+          <h2>My Ultimate Journey</h2>
         
-        <!-- <div class="">
-            <blockquote class="twitter-tweet tw-align-right" ><p lang="en" dir="ltr">Today&#39;s first rookie - Alex Cameron!<a href="https://twitter.com/hashtag/2020Roster?src=hash&amp;ref_src=twsrc%5Etfw">#2020Roster</a> <a href="https://twitter.com/hashtag/BadBoyUltimate?src=hash&amp;ref_src=twsrc%5Etfw">#BadBoyUltimate</a> <a href="https://twitter.com/hashtag/2020season?src=hash&amp;ref_src=twsrc%5Etfw">#2020season</a> <a href="https://t.co/WjZ7xy4Raq">pic.twitter.com/WjZ7xy4Raq</a></p>&mdash; Ottawa Outlaws (@OutlawsAUDL) <a href="https://twitter.com/OutlawsAUDL/status/1233040395367583747?ref_src=twsrc%5Etfw">February 27, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div> -->
+              <p>
+                  I have been playing Ultimate Frisbee since my first year of high school, in 2015. I have played competitively since I was 16 when I played on the Ottawa Ignite junior team for 3 years before competing with adult teams.
+              </p>
+              <p>
+                  I have played for the Carleton University's Men's Ultimate team since 2018 and am currently one of the teams captains. I also play with the highest competitive Ottawa open team, Phoenix. In 2020 I joined the Ottawa Outlaws program. The Ottawa Outlaws were a professional Ultimate Frisbee team who were founded in 2015 and competed in the AUDL from 2015-2022. <a href='https://theaudl.com/league/players/acameron'>Click here to view my career stats. </a>
+             </p>
+            </div>
+              <img class="layout"src="./Assets/layout.gif">
+          <p class="example">Enjoy this gif of me catching a frisbee :)</p> 
+      </div>
     </div>
+    
+    <!-- <div class="">
+        <blockquote class="twitter-tweet tw-align-right" ><p lang="en" dir="ltr">Today&#39;s first rookie - Alex Cameron!<a href="https://twitter.com/hashtag/2020Roster?src=hash&amp;ref_src=twsrc%5Etfw">#2020Roster</a> <a href="https://twitter.com/hashtag/BadBoyUltimate?src=hash&amp;ref_src=twsrc%5Etfw">#BadBoyUltimate</a> <a href="https://twitter.com/hashtag/2020season?src=hash&amp;ref_src=twsrc%5Etfw">#2020season</a> <a href="https://t.co/WjZ7xy4Raq">pic.twitter.com/WjZ7xy4Raq</a></p>&mdash; Ottawa Outlaws (@OutlawsAUDL) <a href="https://twitter.com/OutlawsAUDL/status/1233040395367583747?ref_src=twsrc%5Etfw">February 27, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div> -->
+
     <body>
         <div class="loader-wrapper">
             <span class="loading"><span class="loading-inner"></span></span>
@@ -294,6 +296,6 @@
         </a>
     </div>
     <div class="footer">
-        Published: 2021-01-01 Last Updated: 2022-01-17
+        Published: 2021-01-01 Last Updated: 2023-11-27
     </div>
 </html>
