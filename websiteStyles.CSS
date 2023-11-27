@@ -47,21 +47,9 @@ body {
     flex-direction: column;
 
 }
-.main-about {
-    font-family: Tahoma, sans-serif;
-    text-align: left;
-    font-size: 1.2em;
-    color: #d8d2d1;
-}
-.title-about {
-    text-align: left;
-    font-weight: bold;
-    font-size: 1.4em;
-    color: #a2aebb;
-}
-.about {
-    float: left;
-    padding: 15px; 
+hr {
+    width: 75%;/* Adjust the width as needed */
+    /* margin: 0 auto; Center the <hr> element */
 }
 
 .background {
@@ -82,6 +70,7 @@ body {
     position: fixed;
     top: 0;
     display: flex;
+    align-items: center;
 }
 
 @media (min-width: 950px){
@@ -274,10 +263,11 @@ div.pullUp a:hover:before
     border-style: solid;
 }
 .layout {
-    width: 500px;
     height: auto;
     border-style: solid;
     border-color: gray;
+    max-width: 100%;
+    /* display: block; */
 }
 
 .section {
@@ -461,6 +451,27 @@ body {
     position: relative;
     z-index: 1;
 }
+.blog-title {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
+    box-shadow: 0 3px 7px -1px rgba(0, 0, 0, .1);
+    margin-bottom: 1.6%;
+    background: #d8d2d1;
+    line-height: 1.4;
+    font-family: Tahoma, sans-serif;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 0;
+}
+.blog-card .about {
+    /* project text background */
+    padding: 1.2rem;
+    background: #d8d2d1;
+    position: relative;
+    z-index: 1;
+}
 .blog-card .description h1, .blog-card .description h2 {
     font-family: Tahoma, sans-serif;
 }
@@ -521,8 +532,25 @@ body {
         flex-direction: row;
         margin-left: 15%;
         margin-right: 15%;
-        /* max-width: 1000px; */
    }
+    .blog-title {
+        display: flex;
+        flex-direction: column;
+        margin-left: 5%;
+        margin-right: 5%;
+        box-shadow: 0 3px 7px -1px rgba(0, 0, 0, .1);
+        margin-bottom: 1.6%;
+        background: #d8d2d1;
+        line-height: 1.4;
+        font-family: Tahoma, sans-serif;
+        border-radius: 5px;
+        overflow: hidden;
+        z-index: 0;
+        flex-direction: row;
+        margin-left: 15%;
+        margin-right: 15%;
+        justify-content: center;
+    }
     .blog-card .meta {
         flex-basis: 40%;
         height: auto;
