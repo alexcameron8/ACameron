@@ -43,26 +43,23 @@ $(window).on("load", function(){
     $(".loader-wrapper").fadeOut("slow");
 })
 
-window.addEventListener('scroll', function() {
-    // var section1 = document.getElementById('section1');
-    // var section2 = document.getElementById('section2');
-    // var section3 = document.getElementById('section3');
-    // var section4 = document.getElementById('section4');
-    // var section5 = document.getElementById('section5');
+document.addEventListener('DOMContentLoaded', function () {
+    animateTitle();
+  });
+  
+  function animateTitle() {
+    const titleElement = document.getElementById('animatedTitle');
+    const text = titleElement.textContent;
+    console.log(text)
+    titleElement.innerHTML = ''; // Clear the original text
+    const characters = text.split('');
 
-    // if (section1.getBoundingClientRect().top <= window.innerHeight) {
-    //     section1.classList.add('visible');
-    // }
-    // if (section2.getBoundingClientRect().top <= window.innerHeight) {
-    //     section2.classList.add('visible');
-    // }
-    // if (section3.getBoundingClientRect().top <= window.innerHeight) {
-    //     section3.classList.add('visible');
-    // }
-    // if (section4.getBoundingClientRect().top <= window.innerHeight) {
-    //     section4.classList.add('visible');
-    // }
-    // if (section5.getBoundingClientRect().top <= window.innerHeight) {
-    //     section5.classList.add('visible');
-    // }
-});
+    for (let i = 0; i < text.length; i++) {
+        const charSpan = document.createElement('span');
+        charSpan.textContent = text[i] === ' ' ? '\u00A0' : text[i];
+        charSpan.className = 'name-mobile-span';
+        charSpan.color = 'white';
+        charSpan.style.animationDelay = i * 0.1 + 's';
+        titleElement.appendChild(charSpan);
+      }
+  }
