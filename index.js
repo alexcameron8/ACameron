@@ -1,9 +1,34 @@
+// Get the canvas element
+var canvas = document.querySelector('.background');
+
+// Set the canvas dimensions to match the viewport size
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
 var particles = Particles.init({
     selector: '.background',
     sizeVariations: 2,
     color : ["#a2aebb"],
     connectParticles : true,
 });
+
+window.addEventListener('resize', function () {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    // particles.refresh();
+});
+
+function lightToDark(x) {
+    if ( document.getElementById("lightDark").classList.contains("fa-moon-o")){
+        document.getElementById("lightDark").classList.remove('fa-moon-o');
+        document.getElementById("lightDark").classList.add('fa-sun-o');
+        console.log('Temp: Light Mode');
+    }else{
+        document.getElementById("lightDark").classList.remove('fa-sun-o');
+        document.getElementById("lightDark").classList.add('fa-moon-o');
+        console.log('Temp: Dark Mode');
+    }
+}
 
 function startStop(x) {
     if ( document.getElementById("pausePlay").classList.contains("fa-play")){
@@ -25,7 +50,7 @@ $(function() {
     $(window).scroll(function() {    
         var scroll = $(window).scrollTop();
         
-        if (scroll >= 350) {
+        if (scroll >= 300) {
             navbar.removeClass('navbar').addClass('navbar-alt');
             tabs.removeClass('tab').addClass('tab-alt');
             rightEffect.removeClass('rightEffect').addClass('pullUp');
@@ -50,7 +75,6 @@ document.addEventListener('DOMContentLoaded', function () {
   function animateTitle() {
     const titleElement = document.getElementById('animatedTitle');
     const text = titleElement.textContent;
-    console.log(text)
     titleElement.innerHTML = ''; // Clear the original text
     const characters = text.split('');
 
