@@ -477,6 +477,15 @@ body {
     position: relative;
     z-index: 1;
 }
+.blog-card .about .description {
+    text-align: left;
+}
+
+.blog-card .about .description .h2 {
+    text-align: left;
+    
+}
+
 .blog-card .description h1, .blog-card .description h2 {
     font-family: Tahoma, sans-serif;
 }
@@ -489,7 +498,7 @@ body {
 .blog-card .description h2 {
     font-size: 1rem;
     font-weight: 300;
-    text-transform: uppercase;
+    text-transform: capitalize;
     color: #1f2125;
     margin-top: 5px;
 }
