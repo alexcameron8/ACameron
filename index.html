@@ -7,9 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <!-- <link rel="shortcut icon" type="image/x-icon" href="AC.png" /> -->
+    <button onclick="lightToDark(this)" class="btn-dark-mode"><i id="lightDark" class="fa fa-moon-o"></i></button>
     <button onclick="startStop(this)" class="btn"><i id="pausePlay" class="fa fa-pause"></i></button>
     <div class="navbar rightEffect">
-        <img class="nb-pic" src="AC.png" alt="Logo">
+        <!-- <div class="logo"><img src="AC.png" alt="Logo"></div> -->
         <a class="tab" href="./index.html">HOME</a>
         <a class="tab" href="#about-me" id="ba">ABOUT</a>
         <a class="tab" href="#projects" id="bp">PROJECTS</a>
@@ -26,9 +27,9 @@
         <div class="spacer"></div>
         <!-- <div class="name secondary">Aspiring Software Engineer</div> -->
         <section class="animation">
-          <div class="first"><div>Software Engineering Student</div></div>
-          <div class="second"><div>Hard Worker</div></div>
-          <div class="third"><div>Open to Learning</div></div>
+          <div class="first"><div>Welcome to my Website</div></div>
+          <div class="second"><div>Scroll down to get to know me</div></div>
+          <div class="third"><div>Have a Great Day!</div></div>
         </section>
         <div class="down-arrow"></div>
       </div>
@@ -63,11 +64,9 @@
         </div>
     <hr>
     <!-- Personal Projects Portion --> 
-        <!-- <div class="blog-card"> -->
-          <div class="blog-title" onclick="window.location.hash='bp';">
-            <h1>Personal Projects</h1>
-          </div>    
-        <!-- </div> -->
+    <div id="projects" class="blog-title" onclick="window.location.hash='bp';">
+      <h1>Personal Projects</h1>
+    </div>    
           <div class="blog-card">
             <div class="meta">
               <div class="photo" style="background-image: url(./Assets/Iot-garden.PNG)"></div>
