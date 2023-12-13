@@ -1,8 +1,21 @@
+// Get the canvas element
+var canvas = document.querySelector('.background');
+
+// Set the canvas dimensions to match the viewport size
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
 var particles = Particles.init({
     selector: '.background',
     sizeVariations: 2,
     color : ["#a2aebb"],
     connectParticles : true,
+});
+
+window.addEventListener('resize', function () {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    particles.refresh();
 });
 
 function startStop(x) {
