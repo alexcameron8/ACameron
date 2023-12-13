@@ -10,7 +10,7 @@ For instance, a feature that I have integrated consists of adding interactive be
 - Font pairing
 - Designstripe
 - Stocksy
-- -Particles.js
+- Particles.js
 
 ## Link to Website
 www.acameron.tech
