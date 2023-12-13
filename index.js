@@ -15,8 +15,20 @@ var particles = Particles.init({
 window.addEventListener('resize', function () {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    particles.refresh();
+    // particles.refresh();
 });
+
+function lightToDark(x) {
+    if ( document.getElementById("lightDark").classList.contains("fa-moon-o")){
+        document.getElementById("lightDark").classList.remove('fa-moon-o');
+        document.getElementById("lightDark").classList.add('fa-sun-o');
+        console.log('Temp: Light Mode');
+    }else{
+        document.getElementById("lightDark").classList.remove('fa-sun-o');
+        document.getElementById("lightDark").classList.add('fa-moon-o');
+        console.log('Temp: Dark Mode');
+    }
+}
 
 function startStop(x) {
     if ( document.getElementById("pausePlay").classList.contains("fa-play")){
@@ -38,7 +50,7 @@ $(function() {
     $(window).scroll(function() {    
         var scroll = $(window).scrollTop();
         
-        if (scroll >= 350) {
+        if (scroll >= 300) {
             navbar.removeClass('navbar').addClass('navbar-alt');
             tabs.removeClass('tab').addClass('tab-alt');
             rightEffect.removeClass('rightEffect').addClass('pullUp');
@@ -63,7 +75,6 @@ document.addEventListener('DOMContentLoaded', function () {
   function animateTitle() {
     const titleElement = document.getElementById('animatedTitle');
     const text = titleElement.textContent;
-    console.log(text)
     titleElement.innerHTML = ''; // Clear the original text
     const characters = text.split('');
 
