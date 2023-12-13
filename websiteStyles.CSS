@@ -36,17 +36,7 @@ h4 {
     text-align: left;
     color: #a2aebb;
 }
-body {
-    font-family: Tahoma, sans-serif;
-    text-align: center;
-}
-.section-wrapper {
-    margin-left: 15%;
-    margin-right: 15%;
-    background-color: #1f2125;
-    flex-direction: column;
 
-}
 hr {
     width: 75%;/* Adjust the width as needed */
     /* margin: 0 auto; Center the <hr> element */
@@ -355,9 +345,11 @@ div.pullUp a:hover:before
     box-sizing: border-box;
 }
 body {
+    font-family: Tahoma, sans-serif;
     background: #1f2125;
     margin: 2rem;
     flex-direction: column;
+    text-align: center;
 }
 .blog-card {
     display: flex;
