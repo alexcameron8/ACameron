@@ -13,7 +13,7 @@ div.title h1 {
     font-family: Tahoma, sans-serif;
     font-size: 3em;
     text-align: center;
-    color: black;
+    color: #2e2e31;
     text-shadow:10px 5px 5px gray; 
 }
 h2{
@@ -21,7 +21,7 @@ h2{
     font-size: 2.5em;
     font: Arial;
     text-align: left;
-    color:black;
+    color:#2e2e31;
     text-align: center;
 }
 h3 {
@@ -38,8 +38,8 @@ h4 {
 }
 
 hr {
-    width: 75%;/* Adjust the width as needed */
-    /* margin: 0 auto; Center the <hr> element */
+    width: 70%;
+    color: #a2aebb;
 }
 
 .background {
@@ -52,7 +52,7 @@ hr {
 }
 .navbar {
     font-family: Tahoma, sans-serif;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     padding: 2em 2em;
     text-align: center;
     left: 50%;
@@ -61,6 +61,11 @@ hr {
     top: 0;
     display: flex;
     align-items: center;
+}
+.logo img {
+    margin-top: 0em;
+    width: 50px;
+    height: 50px;
 }
 
 @media (min-width: 950px){
@@ -276,6 +281,13 @@ div.pullUp a:hover:before
     background-color: #1f2125;
 }
 
+.btn-dark-mode {
+    float: left;
+    border: none;
+    color: #d8d2d1;
+    background-color: #1f2125;
+}
+
 .loader-wrapper {
     width: 100%;
     height: 100%;
@@ -293,14 +305,14 @@ div.pullUp a:hover:before
     width: 40px;
     height: 40px;
     position: relative;
-    border: 3px solid black;
+    border: 3px solid #2e2e31;
     animation: loading 2s infinite ease;
 }
 .loading-inner {
     vertical-align: top;
     display: inline-block;
     width: 100%;
-    background-color: black;
+    background-color: #2e2e31;
     opacity: 0.8;
     animation: loading-inner 2s infinite ease-in;
 }
@@ -645,7 +657,7 @@ body {
     .primary {
     color: #d8d2d1;
     text-shadow: 0 20px 25px ,#2e2e31 0 10px 10px  #a2aebb;
-    font-size: 5em;
+    font-size: 4em;
     font-weight: bold;
     text-decoration: none;
     letter-spacing: -3px;
@@ -668,7 +680,7 @@ body {
     border: 15px solid #a2aebb;
     opacity: 0.7;
     transform: translateX(-50%) translateY(-50%) rotate(0deg);
-    animation: 7.5s alternate ease-in-out tipsy;
+    animation: 6.5s alternate ease-in-out tipsy;
     animation-iteration-count: 1;
     }
 
@@ -719,7 +731,7 @@ body {
     }
 
     .spacer {
-        padding: 8.5em;
+        padding: 6.5em;
     }
     .animation {
         height:50px;
@@ -735,7 +747,7 @@ body {
     }
     
     .animation div:first-child {
-    animation: text-animation 8s infinite;
+    animation: text-animation 10s infinite;
     }
     .first div {
         color: #2e2e31;
@@ -772,46 +784,7 @@ body {
     90% {margin-top: 0;}
     100% {margin-top: 0;}
     }
-.down-arrow {
-position: absolute;
-top: calc(100vh - 60px);
-left: calc(50% - 14px);
-width: 0;
-height: 30px;
-border: 2px solid;
-border-radius: 2px;
-color: white;
-opacity: 0.3;
-}
 
-.down-arrow:after {
-content: " ";
-position: absolute;
-top: 12px;
-left: -10px;
-width: 16px;
-height: 16px;
-border-bottom: 4px solid;
-border-right: 4px solid;
-border-radius: 4px;
-transform: rotateZ(45deg);
-}
-
-@keyframes jumpInfinite {
-0% {
-    margin-top: 0;
-}
-50% {
-    margin-top: 20px;
-}
-100% {
-    margin-top: 0;
-}
-}
-
-.down-arrow {
-animation: jumpInfinite 1.5s infinite;
-}
 
 .invisible {
 visibility: 0;
