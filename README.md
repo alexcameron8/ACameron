@@ -1,4 +1,5 @@
 # Personal Website
+Domain: www.acameron.tech
 ## Website Deployment Status
 [![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fwww.acameron.tech)](https://www.acameron.tech)
 
@@ -16,6 +17,4 @@ For instance, a feature that I have integrated consists of adding interactive be
 - Stocksy
 - Particles.js
 
-## Link to Website
-www.acameron.tech
 
