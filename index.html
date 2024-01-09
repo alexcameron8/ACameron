@@ -1,300 +1,491 @@
 <!DOCTYPE html>
 <html lang="en-us">
-    <title>Alex Cameron</title>
-    <link rel="stylesheet" href="websiteStyles.CSS">
-    <script src="jquery-3.6.2.min.js"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <!-- <link rel="shortcut icon" type="image/x-icon" href="AC.png" /> -->
-    <button onclick="lightToDark(this)" class="btn-dark-mode"><i id="lightDark" class="fa fa-moon-o"></i></button>
-    <button onclick="startStop(this)" class="btn"><i id="pausePlay" class="fa fa-pause"></i></button>
-    <div class="navbar rightEffect">
-        <div class="logo"><img src="AC.png" alt="Logo"></div>
-        <a class="tab" href="./index.html">HOME</a>
-        <a class="tab" href="#about-me" id="ba">ABOUT</a>
-        <a class="tab" href="#projects" id="bp">PROJECTS</a>
-        <a class="tab" href="documents/Alex_Cameron_Resume.pdf">RESUME</a>
-        <!-- <a class="tab" href="">CONTACT</a> -->
-    </div>
-  
-    <canvas class="background"></canvas>
-        <div class="title">
-        <!-- Background uses particles.js V2.2.2 which is a lightweight, dependency-free and responsive javascript plugin for particle backgrounds.  Credit: https://marcbruederlin.github.io/particles.js/-->
-        <div class="spacer"></div>
-        <div class="name primary">ALEX CAMERON</div>
-        <div class="name-mobile" id="animatedTitle">ALEX CAMERON</div>
-        <div class="spacer"></div>
-        <!-- <div class="name secondary">Aspiring Software Engineer</div> -->
-        <section class="animation">
-          <div class="first"><div>Welcome To My Website</div></div>
-          <div class="second"><div>Scroll Down To Get To Know Me</div></div>
-          <div class="third"><div>Have A Great Day!</div></div>
-        </section>
-        <div class="down-arrow"></div>
-      </div>
+  <title>Alex Cameron</title>
+  <link rel="stylesheet" href="websiteStyles.CSS" />
+  <script src="jquery-3.6.2.min.js"></script>
+  <link
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous"
+  />
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+  />
+  <!-- <link rel="shortcut icon" type="image/x-icon" href="AC.png" /> -->
+  <!-- <button onclick="lightToDark(this)" class="btn-dark-mode">
+    <i id="lightDark" class="fa fa-moon-o"></i>
+  </button> -->
+  <button onclick="startStop(this)" class="btn">
+    <i id="pausePlay" class="fa fa-pause"></i>
+  </button>
+  <div class="navbar rightEffect" id="navbar">
+    <div class="logo"><img src="AC.png" alt="Logo" /></div>
+    <a class="tab" href="./index.html">HOME</a>
+    <a class="tab" href="#about-me" id="ba">ABOUT</a>
+    <a class="tab" href="#projects" id="bp">PROJECTS</a>
+    <a class="tab" href="documents/Alex_Cameron_Resume.pdf">RESUME</a>
+    <!-- <button id="hideButton" onclick="toggleNavbar()">Hide Navbar</button> -->
+    <!-- <a class="tab" href="">CONTACT</a> -->
+  </div>
 
-      <div id="about-me" onclick="window.location.hash='ba';"></div>
-        <hr>
-        <div class="blog-title">
-          <h1>About</h1>
-        </div>    
-        <div class="blog-card">
-          <div class="about">
-          <div class="description">
-          <h2>Who am I?</h2>
-          <p>
-              My name is Alex Cameron and I am a passionate, hard working Software Engineering student at Carleton University. I am currently in my fourth year of my 
-              undergraduate studies and have completed four co-op work terms working on the Software Engineering team at <a href="https://www.gastops.com/company/">Gastops Ltd</a>.  
-          </p>
-          <h2>Interests</h2>
-          <p>
-              During my studies, work experience and participation in hackathons I have developed a passion for solving challenges and creating solutions through programming.
-              I have learned so much by applying my knowledge of software development in school work, personal projects and during my co-op experience. I am eager to continue 
-              learning new skills, concepts and open to advice    
-          </p>
-          <h2>Skills</h2>
-          <p>
-              Programming Languages: Python, Java, C, VB.NET, Dart/Flutter, PHP, HTML, CSS, Javascript <br><br> 
-              Programming Frameworks & Tools: Git, Appwrite, Docker, Jenkins, SQL, Visual Studio, VS Code, Android Studio, Intellij IDE's <br><br>
-              Concepts: Software development, Object-oriented programming, Cryptography, MCV, CI/CD, IoT
-          </p>        
-        </div>
-        </div>
-        </div>
-    <hr>
-    <!-- Personal Projects Portion --> 
-    <div id="projects" class="blog-title" onclick="window.location.hash='bp';">
-      <h1>Personal Projects</h1>
-    </div>    
-          <div class="blog-card">
-            <div class="meta">
-              <div class="photo" style="background-image: url(./Assets/Iot-garden.PNG)"></div>
-              <ul class="details">
-                <li class="author">
-                    <ul>
-                        <li><a href="#">Alex Cameron</a></li>
-                        <li><a href="#">Ben Munro</a></li>
-                        <li><a href="#">Thomas Dunnigan</a></li>
-                    </ul>
-                <li class="date">Summer 2022 - Spring 2023</li>
-                <li class="tags">
-                  <ul>
-                    <li><a href="https://docs.flutter.dev/">Flutter</a></li>
-                    <li><a href="https://dart.dev/guides">Dart</a></li>
-                    <li><a href="https://appwrite.io/docs">Appwrite</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-            <div class="description">
-              <h1>IoT Urban Smart Gardening System</h1>
-              <h2>Engineering Capstone Project</h2>
-              <p>Developed a mobile app to communicate with an IoT enabled smart gardening and farming solution. The sensor node uses an ESP32 MCU to 
-                communicate with the sensor devices. Built the backend using Appwrite which communicates to the sensor node by an MQTT broker. 
-                The mobile app was developed in Dart using the Flutter framework.</p>
-              <p class="read-more">
-                <a href="https://gitlab.com/smartgardeningproject">View Github Repository</a>
-              </p>
-            </div>
-          </div>
+  <canvas class="background"></canvas>
+  <div class="title">
+    <!-- Background uses particles.js V2.2.2 which is a lightweight, dependency-free and responsive javascript plugin for particle backgrounds.  Credit: https://marcbruederlin.github.io/particles.js/-->
+    <div class="spacer"></div>
+    <div class="name primary">ALEX CAMERON</div>
+    <div class="name-mobile" id="animatedTitle">ALEX CAMERON</div>
+    <div class="spacer"></div>
+    <!-- <div class="name secondary">Aspiring Software Engineer</div> -->
+    <section class="animation">
+      <div class="first"><div>Welcome To My Website</div></div>
+      <div class="second"><div>Scroll Down To Get To Know Me</div></div>
+      <div class="third"><div>Have A Great Day!</div></div>
+    </section>
+    <div class="down-arrow"></div>
+  </div>
 
-            <div class="blog-card alt">
-                <div class="meta">
-                  <div class="photo" style="background-image: url(./Assets/elev-proj.PNG)"></div>
-                  <ul class="details">
-                    <li class="author">
-                        <ul>
-                          <li><a href="#">Martin Dimitrov</a></li>
-                          <li><a href="#">Ammar Tosun</a></li>
-                          <li><a href="#">Erdem Yanikomeroglu</a></li>
-                          <li><a href="#">David Casciano</a></li>
-                        </ul>
-                    <li class="date">Jan 2021 - April 2021</li>
-                    <li class="tags">
-                      <ul>
-                        <li><a href="">Java</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-                <div class="description">
-                  <h1>Elevator Simulator Project</h1>
-                  <h2>SYSC3303 - Java Desktop Application</h2>
-                  <p>
-                    This project is a java desktop application which simulates an elevator using various software engineering concepts, such as, concurrency, scheduling, real-time systems, 
-                    thread synchronization, MCV and internet protocols (TCP/IP). This project was done with 4 other group members and my contributions consisted of creating a GUI for the project using the Java
-                    swing framework while using model, control, view engineering design strategy.
-                  </p>
-                  <p class="read-more">
-                    <a href="https://github.com/martindmtrv/elevator-project">View Github Repository</a>
-                  </p>
-                </div>
-              </div>
-        
-            <div class="blog-card">
-                <div class="meta">
-                  <div class="photo" style="background-image: url(./Assets/web-dev.png)"></div>
-                  <ul class="details">
-                    <li class="author"><a href="./index.html#about-me">Alex Cameron</a></li>
-                    <li class="date">January 2021-December 2022</li>
-                    <li class="tags">
-                      <ul>
-                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
-                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
-                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Javascript</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-                <div class="description">
-                  <h1>Personal Website</h1>
-                  <h2>Exploration of Web Development</h2>
-                  <p>I developed this personal website using HTML, CSS, and JavaScript. I used HTML to structure the content of the website, CSS to style the page and add visual elements, and JavaScript to add interactivity and dynamic features to the site.</p>
-                  <!-- <p>The goal of the project was to gain a better understanding of these fundamental web development technologies and to create a digital space where I could showcase my work, interests, and accomplishments.
-        
-        I started by planning out the layout and content of the website, including sections for my personal information, education, work experience, skills, and portfolio. I then used HTML to create the structure of the site, including the navigation menu, header, and different sections for each piece of content. I used CSS to add styling to the page, including colors, fonts, and responsive design elements to ensure that the website looked good on different devices.
-        
-        Finally, I used JavaScript to add interactivity to the website. This included things like a simple contact form, a scroll-to-top button, and a responsive navigation menu that expanded and collapsed based on the screen size. I also used JavaScript to create some basic animation effects, such as a slideshow of my portfolio projects.
-        
-        Overall, I found the project to be a great learning experience and I'm very happy with the final result. I now have a personal website that effectively showcases my skills and experiences, and I have a better understanding of HTML, CSS, and JavaScript as a result of completing the project.</p> -->
-                  <p class="read-more">
-                    <a href="https://github.com/alexcameron8/ACameron">View Github Repository</a>
-                  </p>
-                </div>
-              </div>
-              <div class="blog-card alt">
-                <div class="meta">
-                  <div class="photo" style="background-image: url(./Assets/Risk.PNG)"></div>
-                  <ul class="details">
-                    <li class="author">
-                        <ul>
-                            <li><a href="#">Alex Cameron</a></li>
-                            <li><a href="#">Ben Munro</a></li>
-                            <li><a href="#">Thomas Dunnigan</a></li>
-                        </ul>
-                    <li class="date">Fall/Winter 2020</li>
-                    <li class="tags">
-                      <ul>
-                        <li><a href="https://docs.oracle.com/en/java/">Java</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-                <div class="description">
-                  <h1>Risk Board Game</h1>
-                  <h2>SYSC3110 - Java Desktop Application</h2>
-                  <p>Built and designed a GUI application in java, based on the board game Risk, which implements many software development patterns, such as MCV, Test-driven development and more.
-                    Worked in a team of 3 members and used git as the version control system which ensured easy issue tracking and debugging.
-                    Designed UML and sequence diagrams while designing and enhancing the project which ensured all team members had clear goals and ideas while developing the project.</p>
-                  <p class="read-more">
-                    <a href="https://github.com/alexcameron8/RiskGame">View Github Repository</a>
-                  </p>
-                </div>
-              </div>
-        
-              <div class="blog-card">
-                <div class="meta">
-                  <div class="photo" style="background-image: url(./Assets/SchoolPlannerEx.PNG)"></div>
-                  <ul class="details">
-                    <li class="author"><a href="./index.html#about-me">Alex Cameron</a></li>
-                    <li class="date">January 2021</li>
-                    <li class="tags">
-                      <ul>
-                        <li><a href="https://docs.oracle.com/en/java/">Java</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-                <div class="description">
-                  <h1>SchoolPlanner</h1>
-                  <h2>Java Desktop Application</h2>
-                  <p>This application was created to better organize and manage assignment and test due dates during my studies at Carleton University.
-                    The SchoolPlanner program was programmed in java applying software engineering principles and includes features, such as, saving and loading task lists in XML format and capabilities to generate bulleted task lists.</p>
-                  <p class="read-more">
-                    <a href="https://github.com/alexcameron8/SchoolPlanner">View Github Repository</a>
-                  </p>
-                </div>
-              </div>
-        
-              <div class="blog-card alt">
-                <div class="meta">
-                  <div class="photo" style="background-image: url(./Assets/herc-proj.PNG)"></div>
-                  <ul class="details">
-                    <li class="author">
-                        <ul>
-                            <li><a href="#">Alex Cameron</a></li>
-                            <li><a href="#">Martin Dimitrov</a></li>
-                            <li><a href="#">Mesha Edwardson</a></li>
-                        </ul>
-                    <li class="date">October 9-11, 2020</li>
-                    <li class="tags">
-                      <ul>
-                        <li><a href="https://docs.oracle.com/en/java/">Java</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-                <div class="description">
-                  <h1>Hercules Gym Workout</h1>
-                  <h2>Sunhack Hackathon</h2>
-                  <p>Hercules is a mobile app created with react native. The app contains a database of hundreds of workouts. We leverage this database to let the user create and track several different workouts of their choice.
-                    This project was done in a group of 3, however, this was my first hackathon and first time using any front-end language which made this project a great learning opportunity and allowed myself to learn how to work better with a team.
-                    Designed the models for routines and exercises while learning and understanding typescript syntax in a short period of time.</p>
-                  <p class="read-more">
-                    <a href="https://github.com/alexcameron8/hercules">View Github Repository</a>
-                  </p>
-                </div>
-              </div>
-        <hr>    
-      <div class="blog-title">
-        <h1>Ultimate Frisbee</h1>
-      </div>    
-    <div class="blog-card">
-      <div class="about">
-        <div class="description">
-          <h2>My Ultimate Journey</h2>
-        
-              <p>
-                  I have been playing Ultimate Frisbee since my first year of high school, in 2015. I have played competitively since I was 16 when I played on the Ottawa Ignite junior team for 3 years before competing with adult teams.
-              </p>
-              <p>
-                  I have played for the Carleton University's Men's Ultimate team since 2018 and am currently one of the teams captains. I also play with the highest competitive Ottawa open team, Phoenix. In 2020 I joined the Ottawa Outlaws program. The Ottawa Outlaws were a professional Ultimate Frisbee team who were founded in 2015 and competed in the AUDL from 2015-2022. <a href='https://theaudl.com/league/players/acameron'>Click here to view my career stats. </a>
-             </p>
-            </div>
-              <img class="layout"src="./Assets/layout.gif">
-          <p class="example">Enjoy this gif of me catching a frisbee :)</p> 
+  <div id="about-me" onclick="window.location.hash='ba';"></div>
+  <hr />
+  <div class="blog-title">
+    <h1>About</h1>
+  </div>
+  <div class="blog-card">
+    <div class="about">
+      <div class="description">
+        <h2>Who am I?</h2>
+        <p>
+          Greetings, I'm Alex Cameron, an energetic and dedicated recent
+          graduate with a degree in Software Engineering from Carleton
+          University. Ottawa, my hometown, has been the backdrop to my
+          upbringing, supported by my parents and a sister who have played
+          pivotal roles in shaping my values. My professional journey has been
+          enriched by a substantial 16-month Co-op tenure with
+          <a href="https://www.gastops.com/company/">Gastops Ltd</a>, where I
+          actively contributed to the Software Engineering team. <br /><br />
+          As I embark on my career, I am driven by a commitment to excellence
+          and a continuous pursuit of knowledge in the ever-evolving field of
+          software engineering. In addition to showcasing my academic and
+          professional background, my portfolio blog aims to provide insights
+          into my skill set, projects, and the diverse experiences that have
+          shaped my journey.
+        </p>
+        <h2>Interests</h2>
+        <p>
+          In addition to my passion for software engineering, I lead an active
+          lifestyle that reflects my love for athleticism and staying in shape.
+          Whether it's a rigorous workout at the gym or a spirited game of
+          ultimate frisbee, I find joy in the physical and mental challenges
+          that come with these activities. As an avid sports enthusiast, I enjoy
+          watching various sports, with a particular passion for hockey,
+          football, and basketball. Some of my most favourite and memorable
+          moments are attending live sporting events on vacations with family
+          and friends, while cheering for my favorite teams. Balancing my active
+          hobbies, in my leisure time I like to engage in stimulating games that
+          challenge my strategic thinking. This diverse range of interests not
+          only complements my technical skills but also contributes to a
+          well-rounded and dynamic approach to both work and life.
+        </p>
+        <h2>Skills</h2>
+        <p>
+          Throughout my academic journey, work experience and participation in
+          hackathons I have cultivated a passion for overcoming challenges and
+          creating innovative solutions within the realm of programming. My
+          experiences in school, personal projects and during my work experience
+          have been critical in refining and advancing my software development
+          skills. I am eager to continue acquiring new skills, exploring
+          concepts and open to valuable insights and fuidance within the dynamic
+          field of software engineering.
+          <br /><br />
+          Programming Languages:
+          <a href="https://www.python.org/">Python</a>,
+          <a href="https://docs.oracle.com/en/java/">Java</a>,
+          <a href="https://devdocs.io/c/">C</a>,
+          <a href="https://learn.microsoft.com/en-us/dotnet/">VB.NET</a>,
+          <a href="https://dart.dev/guides">Dart</a>/<a
+            href="https://docs.flutter.dev/"
+            >Flutter</a
+          >, <a href="https://www.php.net/docs.php">PHP</a>,
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>,
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>,
+          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            >Javascript</a
+          >
+          <br /><br />
+          Programming Frameworks & Tools: Git, Appwrite, Docker, Jenkins, SQL,
+          Visual Studio, VS Code, Android Studio, Intellij IDE's <br /><br />
+          Concepts: Software development, Object-oriented programming,
+          Cryptography, MCV, CI/CD, IoT
+        </p>
       </div>
     </div>
-    
-    <!-- <div class="">
+  </div>
+  <hr />
+  <!-- Personal Projects Portion -->
+  <div id="projects" class="blog-title" onclick="window.location.hash='bp';">
+    <h1>Projects</h1>
+  </div>
+  <div class="blog-card">
+    <div class="meta">
+      <div
+        class="photo"
+        style="background-image: url(./Assets/Iot-garden.PNG)"
+      ></div>
+      <ul class="details">
+        <li class="author">
+          <ul>
+            <li><a href="#">Alex Cameron</a></li>
+            <li><a href="#">Ben Munro</a></li>
+            <li><a href="#">Thomas Dunnigan</a></li>
+          </ul>
+        </li>
+
+        <li class="date">Summer 2022 - Spring 2023</li>
+        <li class="tags">
+          <ul>
+            <li><a href="https://docs.flutter.dev/">Flutter</a></li>
+            <li><a href="https://dart.dev/guides">Dart</a></li>
+            <li><a href="https://appwrite.io/docs">Appwrite</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="description">
+      <h1>IoT Urban Smart Gardening System</h1>
+      <h2>Engineering Capstone Project</h2>
+      <p>
+        Developed a mobile app to communicate with an IoT enabled smart
+        gardening and farming solution. The sensor node uses an ESP32 MCU to
+        communicate with the sensor devices. Built the backend using Appwrite
+        which communicates to the sensor node by an MQTT broker. The mobile app
+        was developed in Dart using the Flutter framework.
+      </p>
+      <br />
+
+      <video class="layout" width="400" controls>
+        <source
+          src="./assets/IoT-SmartGarden-PosterFair-Video.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <p class="read-more">
+        <a href="https://gitlab.com/smartgardeningproject"
+          >View Github Repository</a
+        >
+      </p>
+    </div>
+  </div>
+  <div class="blog-card alt">
+    <div class="meta">
+      <div
+        class="photo"
+        style="background-image: url(./Assets/Amazin_Bookstore.PNG)"
+      ></div>
+      <ul class="details">
+        <li class="author">
+          <ul>
+            <li><a href="#">Ben Munro</a></li>
+            <li><a href="#">Thomas Dunnigan</a></li>
+            <li><a href="#">Josh King</a></li>
+          </ul>
+        </li>
+
+        <li class="date">Jan 2023 - April 2023</li>
+        <li class="tags">
+          <ul>
+            <li><a href="">Java</a></li>
+            <li><a href="">Spring</a></li>
+            <li><a href="">RESTful API</a></li>
+            <li><a href="">Maven</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="description">
+      <h1>Amazin Online Bookstore</h1>
+      <h2>SYSC4806 - Java Spring Web Application</h2>
+      <p>
+        A Java web application that provides an online simulated platform for
+        selling and purchasing books. This application has several features
+        involving user accounts, selecting and purchasing books, as well as
+        features to create new books and book stores. This app is developed
+        using the Spring framework and leverages RESTful API's to make requests
+        and serve information. The front end is designed using HTML, Javascript
+        and the JQuery framework.
+      </p>
+      <p class="read-more">
+        <a href="https://github.com/computebender/SYSC4806_Project5"
+          >View Github Repository</a
+        >
+      </p>
+    </div>
+  </div>
+  <div class="blog-card">
+    <div class="meta">
+      <div
+        class="photo"
+        style="background-image: url(./Assets/elev-proj.PNG)"
+      ></div>
+      <ul class="details">
+        <li class="author">
+          <ul>
+            <li><a href="#">Martin Dimitrov</a></li>
+            <li><a href="#">Ammar Tosun</a></li>
+            <li><a href="#">Erdem Yanikomeroglu</a></li>
+            <li><a href="#">David Casciano</a></li>
+          </ul>
+        </li>
+
+        <li class="date">Jan 2021 - April 2021</li>
+        <li class="tags">
+          <ul>
+            <li><a href="">Java</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="description">
+      <h1>Elevator Simulator Project</h1>
+      <h2>SYSC3303 - Java Desktop Application</h2>
+      <p>
+        This project is a java desktop application which simulates an elevator
+        using various software engineering concepts, such as, concurrency,
+        scheduling, real-time systems, thread synchronization, MCV and internet
+        protocols (TCP/IP). This project was done with 4 other group members and
+        my contributions consisted of creating a GUI for the project using the
+        Java swing framework while using model, control, view engineering design
+        strategy.
+      </p>
+      <p class="read-more">
+        <a href="https://github.com/martindmtrv/elevator-project"
+          >View Github Repository</a
+        >
+      </p>
+    </div>
+  </div>
+
+  <div class="blog-card alt">
+    <div class="meta">
+      <div
+        class="photo"
+        style="background-image: url(./Assets/web-dev.png)"
+      ></div>
+      <ul class="details">
+        <li class="author"><a href="./index.html#about-me">Alex Cameron</a></li>
+        <li class="date">January 2021-December 2022</li>
+        <li class="tags">
+          <ul>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                >HTML</a
+              >
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                >Javascript</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="description">
+      <h1>Personal Website</h1>
+      <h2>Exploration of Web Development</h2>
+      <p>
+        I developed this personal website using HTML, CSS, and JavaScript. I
+        used HTML to structure the content of the website, CSS to style the page
+        and add visual elements, and JavaScript to add interactivity and dynamic
+        features to the site.
+      </p>
+      <p class="read-more">
+        <a href="https://github.com/alexcameron8/ACameron"
+          >View Github Repository</a
+        >
+      </p>
+    </div>
+  </div>
+  <div class="blog-card">
+    <div class="meta">
+      <div class="photo" style="background-image: url(./Assets/Risk.PNG)"></div>
+      <ul class="details">
+        <li class="author">
+          <ul>
+            <li><a href="#">Alex Cameron</a></li>
+            <li><a href="#">Ben Munro</a></li>
+            <li><a href="#">Thomas Dunnigan</a></li>
+          </ul>
+        </li>
+
+        <li class="date">Fall/Winter 2020</li>
+        <li class="tags">
+          <ul>
+            <li><a href="https://docs.oracle.com/en/java/">Java</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="description">
+      <h1>Risk Board Game</h1>
+      <h2>SYSC3110 - Java Desktop Application</h2>
+      <p>
+        Built and designed a GUI application in java, based on the board game
+        Risk, which implements many software development patterns, such as MCV,
+        Test-driven development and more. Worked in a team of 3 members and used
+        git as the version control system which ensured easy issue tracking and
+        debugging. Designed UML and sequence diagrams while designing and
+        enhancing the project which ensured all team members had clear goals and
+        ideas while developing the project.
+      </p>
+      <p class="read-more">
+        <a href="https://github.com/alexcameron8/RiskGame"
+          >View Github Repository</a
+        >
+      </p>
+    </div>
+  </div>
+
+  <div class="blog-card alt">
+    <div class="meta">
+      <div
+        class="photo"
+        style="background-image: url(./Assets/SchoolPlannerEx.PNG)"
+      ></div>
+      <ul class="details">
+        <li class="author"><a href="./index.html#about-me">Alex Cameron</a></li>
+        <li class="date">January 2021</li>
+        <li class="tags">
+          <ul>
+            <li><a href="https://docs.oracle.com/en/java/">Java</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="description">
+      <h1>SchoolPlanner</h1>
+      <h2>Java Desktop Application</h2>
+      <p>
+        This application was created to better organize and manage assignment
+        and test due dates during my studies at Carleton University. The
+        SchoolPlanner program was programmed in java applying software
+        engineering principles and includes features, such as, saving and
+        loading task lists in XML format and capabilities to generate bulleted
+        task lists.
+      </p>
+      <p class="read-more">
+        <a href="https://github.com/alexcameron8/SchoolPlanner"
+          >View Github Repository</a
+        >
+      </p>
+    </div>
+  </div>
+
+  <div class="blog-card">
+    <div class="meta">
+      <div
+        class="photo"
+        style="background-image: url(./Assets/herc-proj.PNG)"
+      ></div>
+      <ul class="details">
+        <li class="author">
+          <ul>
+            <li><a href="#">Alex Cameron</a></li>
+            <li><a href="#">Martin Dimitrov</a></li>
+            <li><a href="#">Mesha Edwardson</a></li>
+          </ul>
+        </li>
+
+        <li class="date">October 9-11, 2020</li>
+        <li class="tags">
+          <ul>
+            <li><a href="https://docs.oracle.com/en/java/">Java</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="description">
+      <h1>Hercules Gym Workout</h1>
+      <h2>Sunhack Hackathon</h2>
+      <p>
+        Hercules is a mobile app created with react native. The app contains a
+        database of hundreds of workouts. We leverage this database to let the
+        user create and track several different workouts of their choice. This
+        project was done in a group of 3, however, this was my first hackathon
+        and first time using any front-end language which made this project a
+        great learning opportunity and allowed myself to learn how to work
+        better with a team. Designed the models for routines and exercises while
+        learning and understanding typescript syntax in a short period of time.
+      </p>
+      <p class="read-more">
+        <a href="https://github.com/alexcameron8/hercules"
+          >View Github Repository</a
+        >
+      </p>
+    </div>
+  </div>
+  <hr />
+  <div class="blog-title">
+    <h1>Ultimate Frisbee</h1>
+  </div>
+  <div class="blog-card">
+    <div class="about">
+      <div class="description">
+        <h2>My Ultimate Journey</h2>
+
+        <p>
+          I have been playing Ultimate Frisbee since my first year of high
+          school, in 2015. I have played competitively since I was 16 when I
+          played on the Ottawa Ignite junior team for 3 years before competing
+          with adult teams.
+        </p>
+        <p>
+          I have played for the Carleton University's Men's Ultimate team since
+          2018 and am currently one of the teams captains. I also play with the
+          highest competitive Ottawa open team, Phoenix. In 2020 I joined the
+          Ottawa Outlaws program. The Ottawa Outlaws were a professional
+          Ultimate Frisbee team who were founded in 2015 and competed in the
+          AUDL from 2015-2022.
+          <a href="https://theaudl.com/league/players/acameron"
+            >Click here to view my career stats.
+          </a>
+        </p>
+      </div>
+      <img class="layout" src="./Assets/layout.gif" />
+      <p class="example">Enjoy this gif of me catching a frisbee :)</p>
+    </div>
+  </div>
+
+  <!-- <div class="">
         <blockquote class="twitter-tweet tw-align-right" ><p lang="en" dir="ltr">Today&#39;s first rookie - Alex Cameron!<a href="https://twitter.com/hashtag/2020Roster?src=hash&amp;ref_src=twsrc%5Etfw">#2020Roster</a> <a href="https://twitter.com/hashtag/BadBoyUltimate?src=hash&amp;ref_src=twsrc%5Etfw">#BadBoyUltimate</a> <a href="https://twitter.com/hashtag/2020season?src=hash&amp;ref_src=twsrc%5Etfw">#2020season</a> <a href="https://t.co/WjZ7xy4Raq">pic.twitter.com/WjZ7xy4Raq</a></p>&mdash; Ottawa Outlaws (@OutlawsAUDL) <a href="https://twitter.com/OutlawsAUDL/status/1233040395367583747?ref_src=twsrc%5Etfw">February 27, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div> -->
 
-    <body>
-        <div class="loader-wrapper">
-            <span class="loading"><span class="loading-inner"></span></span>
-        </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-        <script src="index.js"></script>
-    </body>
-    
-    <div class="footerSocials">
-        <a href="https://www.linkedin.com/in/alexcameron8" target="_blank">
-        <i class="fa fa-linkedin fa-3x" aria-hidden="true">
-        </i>
-        </a>
-        <a href="https://github.com/alexcameron8" target="_blank">
-            <i class="fa fa-github fa-3x" aria-hidden="true">
-            </i>
-        </a>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=alex8cameron@gmail.com" target="_blank">
-            <i class="fa fa-at fa-3x" aria-hidden="true">
-            </i>
-        </a>
+  <body>
+    <div class="loader-wrapper">
+      <span class="loading"><span class="loading-inner"></span></span>
     </div>
-    <div class="footer">
-        Published: 2021-01-01 Last Updated: 2023-12-13
-    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+
+  <div class="footerSocials">
+    <a href="https://www.linkedin.com/in/alexcameron8" target="_blank">
+      <i class="fa fa-linkedin fa-3x" aria-hidden="true"> </i>
+    </a>
+    <a href="https://github.com/alexcameron8" target="_blank">
+      <i class="fa fa-github fa-3x" aria-hidden="true"> </i>
+    </a>
+    <a
+      href="https://mail.google.com/mail/?view=cm&fs=1&to=alex8cameron@gmail.com"
+      target="_blank"
+    >
+      <i class="fa fa-at fa-3x" aria-hidden="true"> </i>
+    </a>
+  </div>
+  <div class="footer">Published: 2021-01-01 Last Updated: 2024-01-09</div>
 </html>
