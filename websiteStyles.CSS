@@ -583,6 +583,9 @@ body {
     animation: wave 5s;
     display: inline-block;
   }
+  .blog-card .description {
+    padding: 0.2rem;
+  }
 
   .name-mobile-span:hover {
     color: white;
