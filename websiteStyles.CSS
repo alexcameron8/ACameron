@@ -542,6 +542,15 @@ body {
   left: 0%;
 }
 
+.description-title {
+  font-weight: bold;
+  text-align: center;
+}
+
+.list-items {
+  text-align: center;
+}
+
 @keyframes tipsy {
   0% {
     transform: translateX(-50%) translateY(-50%) rotate(0deg);
@@ -563,7 +572,21 @@ body {
     margin-left: 1%;
     margin-right: 1%;
   }
+  .btn {
+    display: none;
+  }
+  .blog-card .about .description p {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  body {
+    margin: 1rem;
+  }
 
+  hr {
+    width: 90%;
+    color: #a2aebb;
+  }
   .logo img {
     display: none;
   }
