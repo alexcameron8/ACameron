@@ -1,5 +1,7 @@
-# Personal Website
-Domain: www.acameron.tech
+# Personal Website (Old Version) - As of Feb 2024 
+This version of the website has been updated and the new release can be found at the following domain:
+
+www.acameron.tech
 ## Website Deployment Status
 [![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fwww.acameron.tech)](https://www.acameron.tech)
 
